@@ -1,0 +1,40 @@
+/*
+
+1. Programa que pide el lado de un cuadrado y muestra por pantalla su area y su perimetro.
+
+2. Programa que pide el de un cilindro, radio de la base y su altura y muestra por pantalla su volumen. 
+
+3. Programa que pide dos horas por pantalla, formada por horas y minutos y muestra por pantalla la diferencia en minutos de las dos horas, sin importar el signo.
+
+hora 1
+======
+horas: 2
+minutos: 30
+
+hora 2
+======
+horas: 1
+minutos: 40
+
+resultado: -50
+
+(100 - 150 = - 50)
+
+4. Programa que pida por pantalla los coeficientes de un polinomio de segundo grado a, b y c. Muestra por pantalla las raices del polinomio, puntos de corte con el eje x.
+
+ax² + bx + c = 0
+
+ayuda:
+#include <math.h>
+
+raiz1 = (-b + sqrt(b*b - 4 * a * c)) / (2*a);
+raiz2 = (-b - sqrt(b*b - 4 * a * c)) / (2*a);
+
+compilar: gcc -o propu4 propu4.c -lm
+ejecutar: ./propu4
+
+5. acabad por favor, el ejercicio 8.
+
+
+*/
+
