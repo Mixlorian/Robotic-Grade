@@ -1,0 +1,41 @@
+/*
+Realiza los siguientes ejercicios.
+1. 
+	Introduce un caracter: t
+	Introduce veces: 5
+	ttttt	
+	
+2.
+	Introduce un caracter: t
+	Introduce otro caracter: x
+	Introduce veces: 5
+	tx xt tx xt tx
+
+3.
+	Introduce un valor: 10
+	Introduce un valor menor que 10: 2
+	Introduce decremento: 1
+	10 9 8 7 6 5 4 3 2
+	
+	------------------------------------
+	Introduce un valor: 3
+	Introduce un valor menor que 3: 5
+	error.
+		
+4.
+	lado de cuadrado [mayor que 0]: -2
+	lado de cuadrado [mayor que 0]: -1
+	lado de cuadrado [mayor que 0]: 3
+	perimetro: 12
+	area: 9
+
+5.
+	base [mayor que 0]: -3
+	altura [mayor que 0]: 5
+	base [mayor que 0]: 3
+	altura [mayor que 0]: 5
+	perimetro: 15
+	area: 19
+	
+
+*/
