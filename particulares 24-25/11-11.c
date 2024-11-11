@@ -78,6 +78,9 @@ void strXcpy(TCadena org, TCadena dst, int nveces){
     }
     
 }
+
+
+
 int main(){
 
     int x[10], y[10], ncuantos;
