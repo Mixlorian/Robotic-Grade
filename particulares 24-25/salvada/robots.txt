@@ -1,0 +1,4 @@
+3
+mi_rabot 2 3 2 0
+machupichu 1 2 2 3
+maricris69 8 8 2 1
