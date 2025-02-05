@@ -30,9 +30,24 @@ int main(){
         cout << s << endl;
     }
     // Pide un caracter entre estos # . , al usuario 
+    char c;
+    do{
+        cout << "Introduce un caracter [# , .]:";
+        cin>> c;
 
+    }while(c != '#' && c != '.' && c != ',')
 
     // Une todas las cadenas del vector en una sola cadena
     // usando el caracter anterior como separador
+    string resultado = " ";
+    for(int i = 0; i < cadenas.length(); i++){
+        resultado = resultado + cadenas[i];
+        if(i != cadena.size() -1){
+            resultado = resultado + c;
+        }
+    }
+    cout << "juntitas" << resultado << endl;
+
+
 
 }
