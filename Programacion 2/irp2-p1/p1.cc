@@ -18,7 +18,7 @@ Evaluations mreserve(uint32_t students, uint32_t subjects, etype_t v){
         e.subjects = subjects;
         e.data = new student_t[students]; 
         for(uint32_t i = 0; i < students; i++){
-            e.data[i] = new etype_t[subjects]
+            e.data[i] = new etype_t[subjects];
         }
 
         for(uint32_t i = 0; i < students; i++){
