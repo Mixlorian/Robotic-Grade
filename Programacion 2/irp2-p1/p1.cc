@@ -63,3 +63,75 @@ void modify_evaluation(Evaluations& e, uint32_t student_idx, uint32_t subject_id
         e.data[student_idx][subject_idx] = new_evaluation;
     }
 }
+
+bool search_element(const std::vector<uint32_t> &st, uint32_t element){
+    bool encontrado = false;
+    for(int i = 0; i < st.size() && !encontrado; i++){
+        if(st[i] == element){
+            encontrado = true;
+        }
+    }
+    return encontrado;
+}
+
+std::vector<uint32_t> get_right_elements(const std::vector<uint32_t> &v, uint32_t limit){
+    std::vector<uint32_t> resultado;
+    for(uint32_t idx : v){
+        if(idx < limit){
+            if(!search_element(resultado, idx)){
+                resultado.push_back(idx);
+            }
+        }
+    }
+    return resultado;
+}
+
+// Función que filtra las evaluaciones creando un nuevo registro con una copia de las evaluaciones para determinados estudiantes y asignaturas.
+Evaluations filter(const Evaluations& m, const std::vector<uint32_t> &student_idxs, const std::vector<uint32_t> &subject_idxs){
+    Evaluations resultado = empty_evaluations;
+    uint32_t fila, columna;
+
+    vector<uint32_t> stu_idxs = get_right_elements(student_idxs, m.students);
+    vector<uint32_t> sub_idxs = get_right_elements(subject_idxs, m.subjects);
+
+    resultado = mreserve(stu_idxs.size(), sub_idxs.size());
+
+    for(uint32_t i = 0; i < stu_idxs.size(); i++){
+        fila = stu_idxs[i];
+        for(uint32_t j = 0; j < sub_idxs.size(); j++){
+            columna = sub_idxs[j];
+            resultado.data[i][j] = m.data[fila][columna];
+        }
+        cout << endl;
+    }
+    return resultado;
+}
+
+// Función que devuelve el promedio de las evaluaciones por asignatura en forma de vector.
+std::vector<etype_t> average_per_subject(const Evaluations& m){
+    std::vector<etype_t> resultado;
+    uint32_t suma;
+    for(uint32_t j = 0; j < m.subjects; j++){ // fijo la columna
+        suma = 0;
+        for(uint32_t i = 0; i < m.students; i++){ // recorro la fila 
+            suma += m.data[i][j];
+        }
+        resultado.push_back(suma / m.students);
+    }
+    return resultado;
+}
+
+// Función que devuelve el promedio de las evaluaciones por estudiante en forma de vector.
+std::vector<etype_t> average_per_student(const Evaluations& m){
+    std::vector<etype_t> resultado;
+    uint32_t suma;
+    for(uint32_t i = 0; i < m.students; i++){
+        suma = 0;
+        for(uint32_t j = 0; j < m.subjects; j++){
+            suma += m.data[i][j];
+        }
+        resultado.push_back(suma / m.subjects);
+    }
+
+    return resultado;
+}
