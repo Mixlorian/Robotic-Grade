@@ -52,7 +52,7 @@ void mshow(const Evaluations& e){
             for(uint32_t j = 0; j < e.subjects; j++){
                 cout << e.data[i][j] << " ";
             }
-            cout << "]";
+            cout << "]" << endl;
         }
     }
 }
