@@ -1,0 +1,54 @@
+ejecutando prueba  10
+OK
+ejecutando prueba  11
+OK
+ejecutando prueba  12
+OK
+ejecutando prueba  13
+visitados al acabar
+1 1 1 1 1 
+d[0]= 0
+d[1]= 2
+d[2]= 4
+d[3]= 3
+d[4]= 4
+OK
+ejecutando prueba  14
+visitados al acabar
+1 1 1 1 1 1 
+d[0]= 6
+d[1]= 5
+d[2]= 8
+d[3]= 3
+d[4]= 0
+d[5]= 2
+OK
+ejecutando prueba  15
+edge[0, 4]
+edge[4, 2]
+edge[0, 1]
+edge[1, 3]
+OK
+ejecutando prueba  17
+visitados al acabar
+1 1 1 1 1 1 1 
+0 10 16 13 28 18 18 
+(1, 0) (3, 1) (5, 3) (6, 5) (2, 6) (4, 5) 
+OK
+ejecutando prueba  18
+visitados al acabar
+1 1 1 0 0 
+Desde 0: 0 1 2 1.79769e+308 1.79769e+308 
+visitados al acabar
+0 1 1 0 0 
+Desde 1: 1.79769e+308 0 1 1.79769e+308 1.79769e+308 
+visitados al acabar
+0 0 1 0 0 
+Desde 2: 1.79769e+308 1.79769e+308 0 1.79769e+308 1.79769e+308 
+visitados al acabar
+0 1 1 1 0 
+Desde 3: 1.79769e+308 3 4 0 1.79769e+308 
+visitados al acabar
+0 1 1 1 1 
+Desde 4: 1.79769e+308 7 8 4 0 
+OK

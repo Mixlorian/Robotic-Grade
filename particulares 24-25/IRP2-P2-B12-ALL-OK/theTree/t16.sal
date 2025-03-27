@@ -1,0 +1,49 @@
+preorden: t/d/b/a/f/e/m/u/w/v/
+postorden: a/b/e/m/f/d/v/w/u/t/
+inorden: a/b/d/e/f/m/t/u/v/w/
+niveles: t/d/u/b/f/w/a/e/m/v/
+hojas: 4
+altura: 3
+nodos: 10
+raiz: t
+es hoja 't': 0
+es hoja 'a': 1
+el maximo es: w
+el padre de f es: d
+el padre de w es: u
+el padre de t es: 0
+el padre nazi es: t
+borrando j: 0
+borrando b: 1
+preorden: t/d/a/f/e/m/u/w/v/
+inorden: a/d/e/f/m/t/u/v/w/
+borrando t: 1
+preorden: u/d/a/f/e/m/w/v/
+inorden: a/d/e/f/m/u/v/w/
+borrando w: 1
+preorden: u/d/a/f/e/m/v/
+inorden: a/d/e/f/m/u/v/
+borrando f: 1
+preorden: u/d/a/m/e/v/
+inorden: a/d/e/m/u/v/
+borrando m: 1
+preorden: u/d/a/e/v/
+inorden: a/d/e/u/v/
+borrando u: 1
+preorden: v/d/a/e/
+inorden: a/d/e/v/
+borrando v: 1
+preorden: d/a/e/
+inorden: a/d/e/
+borrando d: 1
+preorden: e/a/
+inorden: a/e/
+borrando e: 1
+preorden: a/
+inorden: a/
+borrando a: 1
+preorden: 
+inorden: 
+borrando g: 0
+preorden: 
+inorden: 

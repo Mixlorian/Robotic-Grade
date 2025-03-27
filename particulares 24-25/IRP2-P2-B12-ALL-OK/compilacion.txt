@@ -1,0 +1,85 @@
+-----------------------
+PARA COMPILAR LA LISTA.
+-----------------------
+	g++ -g -o listmain listmain.cc list.cc
+----------------------
+EJECUTAMOS EL PROGRAMA
+----------------------
+
+	./listmain
+
+-----------------------------------------
+PARA CONSULTAR EL VALOR DEVUELTO POR MAIN
+-----------------------------------------
+
+	echo $?
+	
+	si imprime 0 es que esta bien
+	si imprime 1 es que esta mal
+
+---------------------------------
+COMO PASAR MAS PRUEBAS (LAS MIAS)
+---------------------------------
+	- las pruebas de la t1.cc a la t6.cc son de la lista
+	- las pruebas de la t7 t8 y t9 son de la pila
+	- las pruebas t10 t11 y t12 son de la cola
+
+	g++ -g -o t1 t1.cc list.cc
+	./t1
+	echo $?
+
+-------------------------------------
+PARA PODER COMPILAR LA PILA Y LA COLA
+-------------------------------------
+	- crear la libreria
+	--------------------
+	cd lib
+	g++ -c error.cc => genera el archivo error.o (archivo compilado)
+	ar rcs liberror.a error.o => crea la libreria liberror.a
+	cd ..
+	
+	- compilamos en el director de nuestra practica
+	-----------------------------------------------
+	g++ -g -o stackmain stackmain.cc stack.cc list.cc -I lib -L lib -lerror
+		-I para incluir una carpeta donde estan las cabeceras
+		-L para incluir un directorio donde estan las librearias.
+
+
+	g++ -g -o t7 t7.cc stack.cc list.cc -I lib -L lib -lerror
+	./t7
+	echo $?
+	valgrind ./t7
+	
+
+	g++ -g -o t10 t10.cc queue.cc list.cc -I lib -L lib -lerror
+	./t10
+	echo $?
+	valgrind ./t10
+
+---------------------------------
+PASAR TODAS LAS PRUEBAS UNA VEZ COMPILADAS.
+---------------------------------
+	./cor12p2.sh
+	
+	ejecuta todas las pruebas y comprueba si la salida es correcta.
+
+
+---------------------------------
+COPIAR VUESTRO ARBOL AL DIRECTORIO theTree
+--------------------------------------------------------------
+	make
+	./cor12p2_tree.sh 
+	valgrind ./t1
+	...
+	valgrind ./t200
+	
+	
+
+
+
+
+
+
+
+
+
