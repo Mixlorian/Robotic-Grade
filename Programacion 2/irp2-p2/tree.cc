@@ -22,7 +22,18 @@ TreeNodePtr& treeRoot          (TreePtr t){
 	return t->root;
 }
 
-bool         treeEmpty         (TreePtr t);
+bool         treeEmpty         (TreePtr t){
+	bool empty;
+	
+	if(t && t->root){
+		empty = false;
+	}
+	else{
+		empty = true;
+	}
+	return empty;
+}
+
 bool         treeInsert        (TreePtr t, Element x){
 	bool inserted = false;
 	
@@ -50,6 +61,17 @@ bool         treeInsert        (TreePtr t, Element x){
 		}
 	}	
 	return inserted;
+}
+
+Element searchAux(TreePtr t){
+	Element e;
+	if(t->root->lefts.root == nullptr){
+		e = t->root->key;
+	}
+	else{
+		e = searchAux(&t->root->lefts);
+	}
+	return e;
 }
 
 bool         treeRemove        (TreePtr t, Element x){
@@ -83,7 +105,7 @@ bool         treeRemove        (TreePtr t, Element x){
 						}
 						else{
 							// has 2 childs
-							minor = searchCorbi(&t->root->rights);
+							minor = searchAux(&t->root->rights);
 							t->root->key = minor;
 							treeRemove(&t->root->rights, minor);
 						}
@@ -133,7 +155,21 @@ uint32_t     treeHeight        (TreePtr t){
 	return h;	
 }
 
-uint32_t     treeLeafTreeNodes (TreePtr t);
+uint32_t     treeLeafTreeNodes (TreePtr t){
+	uint32_t nodes = 0;
+
+	if(t && t->root){
+		if(!t->root->lefts.root && !t->root->rights.root){
+			nodes = 1;
+		} 
+		else{
+			nodes = treeLeafTreeNodes(&t->root->lefts) +
+			treeLeafTreeNodes(&t->root->rights);
+		}
+	}
+	return nodes;
+}
+
 TreeNodePtr  treeSearch        (TreePtr t, Element x){
 	TreeNodePtr res = nullptr;
 	
