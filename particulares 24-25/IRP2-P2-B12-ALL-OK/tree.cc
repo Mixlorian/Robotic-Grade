@@ -91,7 +91,6 @@ bool treeNodeIsLeaf(TreeNodePtr p){
 	return false;
 }
 
-
 bool treeInsert(TreePtr t, Element x){
 	bool inserted = false;
 	
@@ -258,8 +257,6 @@ void treeDestroy(TreePtr t){
 		delete t;
 	}		
 }
-
-
 
 uint32_t treeSize(TreePtr t){
 	uint32_t n = 0;
