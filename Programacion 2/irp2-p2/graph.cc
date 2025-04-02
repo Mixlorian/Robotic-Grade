@@ -10,9 +10,9 @@ GraphPtr    graphCreate      (uint64_t nv, GraphType directed){
 	g->gt = directed;
 	g->ne = 0;
 	g->v = new weightRow_t [nv]; 
-	for(int i = 0; i < nv; i++){
+	for(uint64_t i = 0; i < nv; i++){
 		g->v[i] = new weight_t [nv];
-		for(int j = 0; j < nv; j++){
+		for(uint64_t j = 0; j < nv; j++){
 			g->v[i][j] = NOEDGE;
 		}
 	}	
@@ -28,7 +28,7 @@ void        graphDestroy     (GraphPtr g){
 
 void        graphMakeNull    (GraphPtr g){
 	if(g->v != nullptr){
-		for(int i = 0; i < g->nv; i++){
+		for(uint64_t i = 0; i < g->nv; i++){
 			delete [] g->v[i];
 		}
 		delete [] g->v;
@@ -55,8 +55,7 @@ size_t      graphEdgeSize    (GraphPtr g){
 	}
 }
 
-bool        graphInsert      (GraphPtr g, size_t o, size_t e,
-                              weight_t w = NOWEIGHT){
+bool        graphInsert      (GraphPtr g, size_t o, size_t e,weight_t w ){
     bool inserted = false;
 
     if(g != nullptr){
@@ -118,7 +117,7 @@ std::vector<weight_t> dijkstra (GraphPtr g, size_t i){
 			for(int k = 0; k < g->nv; k++){
 				if(!visitados[k]){
 					if(g->v[menorVertice][k] != EDGEINFINITY){
-						D[k] = min(D[k], D[menorVertice] + g->v[menorVertice][k]);
+						D[k] = std::min(D[k], D[menorVertice] + g->v[menorVertice][k]);
 					}
 				}
 			}
