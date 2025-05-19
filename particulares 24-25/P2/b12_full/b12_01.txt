@@ -1,0 +1,25 @@
+Initial state
+[ 22.0 ] [ 22.0 ] [ 22.0 ] 
+[ 22.0 ] [ 22.0 ] [ 22.0 ] 
+
+Nothing to done, outside 1
+
+Nothing to done, outside 2
+
+New temperature in range (limit low)
+[ 30.0 ] [ 22.0 ] [ 22.0 ] 
+[ 22.0 ] [ 22.0 ] [ 30.0 ] 
+
+New temperature in range (limit high)
+[ 50.0 ] [ 22.0 ] [ 22.0 ] 
+[ 22.0 ] [ 22.0 ] [ 50.0 ] 
+
+New temperature out of range (below)
+[LOW TEMP] Sensor at (0,0) reads 29.9°C
+[ 29.9 ] [ 22.0 ] [ 22.0 ] 
+[ 22.0 ] [ 22.0 ] [ 50.0 ] 
+
+New temperature out of range (above)
+[HIGH TEMP] Sensor at (0,0) reads 50.1°C
+[ 50.1 ] [ 22.0 ] [ 22.0 ] 
+[ 22.0 ] [ 22.0 ] [ 50.0 ] 

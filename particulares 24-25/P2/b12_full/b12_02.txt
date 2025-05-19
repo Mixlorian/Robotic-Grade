@@ -1,0 +1,33 @@
+Initial state
+[ 22.0 ] [ 22.0 ] [ 22.0 ] 
+[ 22.0 ] [ 22.0 ] [ 22.0 ] 
+
+New temperature in range (limit low)
+[ 30.0 ] [ 22.0 ] [ 22.0 ] 
+[ 22.0 ] [ 22.0 ] [ 30.0 ] 
+
+New temperature in range (limit high)
+[ 50.0 ] [ 22.0 ] [ 22.0 ] 
+[ 22.0 ] [ 22.0 ] [ 50.0 ] 
+
+Simulate one step (2 cycles max), all active
+ 1 1 1
+ 1 1 1
+
+Simulate one step (2 cycles max), all active
+ 2 2 2
+ 2 2 2
+
+Simulate one step (2 cycles max), all inactive
+[INACTIVE] Sensor at (0,0) is inactive after 3 cycles
+[INACTIVE] Sensor at (0,1) is inactive after 3 cycles
+[INACTIVE] Sensor at (0,2) is inactive after 3 cycles
+[INACTIVE] Sensor at (1,0) is inactive after 3 cycles
+[INACTIVE] Sensor at (1,1) is inactive after 3 cycles
+[INACTIVE] Sensor at (1,2) is inactive after 3 cycles
+ 3 3 3
+ 3 3 3
+
+Simulate one step (2 cycles max), all active (nothing to done)
+ 3 3 3
+ 3 3 3

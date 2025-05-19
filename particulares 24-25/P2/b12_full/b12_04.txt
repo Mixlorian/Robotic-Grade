@@ -1,0 +1,29 @@
+[LOW TEMP] Sensor at (1,0) reads 5.5°C
+[HIGH TEMP] Sensor at (1,1) reads 35.4°C
+--- Initial Grid State ---
+[ 25.9 ] [ 23.0 ] [ 21.1 ] 
+[ 5.5 ] [ 35.4 ] [ 22.0 ] 
+[ 22.0 ] [ 22.0 ] [ 22.0 ] 
+[INACTIVE] Sensor at (0,0) is inactive after 3 cycles
+[INACTIVE] Sensor at (0,1) is inactive after 3 cycles
+[INACTIVE] Sensor at (1,0) is inactive after 3 cycles
+[INACTIVE] Sensor at (1,1) is inactive after 3 cycles
+[INACTIVE] Sensor at (1,2) is inactive after 3 cycles
+[INACTIVE] Sensor at (2,0) is inactive after 3 cycles
+[INACTIVE] Sensor at (2,1) is inactive after 3 cycles
+[INACTIVE] Sensor at (2,2) is inactive after 3 cycles
+--- Triggering alerts manually ---
+[INACTIVE] Sensor at (0,0) is inactive after 3 cycles
+[INACTIVE] Sensor at (0,1) is inactive after 3 cycles
+[INACTIVE] Sensor at (1,0) is inactive after 3 cycles
+[INACTIVE] Sensor at (1,1) is inactive after 3 cycles
+[INACTIVE] Sensor at (1,2) is inactive after 3 cycles
+[INACTIVE] Sensor at (2,0) is inactive after 3 cycles
+[INACTIVE] Sensor at (2,1) is inactive after 3 cycles
+[INACTIVE] Sensor at (2,2) is inactive after 3 cycles
+--- Swapping two sensors ---
+Sensors swapped successfully.
+--- Final Grid State ---
+[ 23.1 ] [ X ] [ X ] 
+[ X ] [ X ] [ X ] 
+[ X ] [ X ] [ X ] 

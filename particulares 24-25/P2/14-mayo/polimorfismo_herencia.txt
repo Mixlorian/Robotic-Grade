@@ -1,0 +1,53 @@
+4 tipos de polimorfismo
+- Polimorfismo en jerarquias de herencia:
+	- Dos metodos se llaman igual en la clase base y en la clase
+	derivada.
+		* misma signatura en base en derivada
+			parametros -> tipo devuelto
+		
+			- enlace dinamico => virtual
+				Base *b = new Derivada();
+				b->este() // se llama al de la derivada
+				
+				Base *b = new Base();
+				b->este(); // se llama al de la base
+				
+				Derivada *d = new Derivada();
+				d->este(); // se llama al de la derivada
+			
+				=> refinamiento: el metodo de la derivada
+				incluye una llamada al metodo de la base
+					void este(){
+						Base::este();
+					}
+				
+				=> reemplazo: el metodo de la derivada
+				no incluye una llamada al metodo de la base.
+			
+			- enlace estatico => no virtual
+				Base *b = new Derivada();
+				b->este() // se llama al de la base
+				
+				Base *b = new Base();
+				b->este(); // se llama al de la base
+				
+				Derivada *d = new Derivada();
+				d->este(); // se llama al de la derivada
+			
+			
+		
+		* no tienen la misma signatura
+			- redefinicion: enlazado es estatico.
+			
+			Container<ShipPtr> *base = new Hangar();
+			base->remove(shipptr); // hace estatico
+			// llama al de la base independientemente
+			// de que este apuntado a un hangar.
+			
+			Hangar *h = new Hangar();
+			h->remove(shipptr); => error de compilacion
+			
+			
+			
+			
+			
