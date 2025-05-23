@@ -1,0 +1,647 @@
+<!--?xml version="1.0" encoding="utf-8"?-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head>
+<!-- 2022-06-01 mié 12:12 -->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Examen de prácticas (C3)</title>
+<meta name="author" content="Programación-II - Ingeniería Robótica">
+<meta name="generator" content="Org Mode">
+<link rel="stylesheet" type="text/css" href="Examen%20de%20pr%C3%A1cticas%20(C3)_files/htmlize.css">
+<link rel="stylesheet" type="text/css" href="Examen%20de%20pr%C3%A1cticas%20(C3)_files/readtheorg.css">
+<script src="Examen%20de%20pr%C3%A1cticas%20(C3)_files/jquery_002.js"></script>
+<script src="Examen%20de%20pr%C3%A1cticas%20(C3)_files/bootstrap.js"></script>
+<script type="text/javascript" src="Examen%20de%20pr%C3%A1cticas%20(C3)_files/jquery.js"></script>
+<script type="text/javascript" src="Examen%20de%20pr%C3%A1cticas%20(C3)_files/readtheorg.js"></script>
+<script type="text/x-mathjax-config;executed=true">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script src="Examen%20de%20pr%C3%A1cticas%20(C3)_files/MathJax.js"></script>
+<style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 5px 0px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; -khtml-border-radius: 5px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 1px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: .7em}
+.MathJax_MenuRadioCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuLabel {padding: 1px 2em 3px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #DDDDDD; margin: 4px 3px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: #606872; color: white}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
+</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1px; bottom: 2px; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style><style type="text/css">.MathJax_Display {text-align: center; margin: 1em 0em; position: relative; display: block!important; text-indent: 0; max-width: none; max-height: none; min-width: 0; min-height: 0; width: 100%}
+.MathJax .merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MathJax .MJX-monospace {font-family: monospace}
+.MathJax .MJX-sans-serif {font-family: sans-serif}
+#MathJax_Tooltip {background-color: InfoBackground; color: InfoText; border: 1px solid black; box-shadow: 2px 2px 5px #AAAAAA; -webkit-box-shadow: 2px 2px 5px #AAAAAA; -moz-box-shadow: 2px 2px 5px #AAAAAA; -khtml-box-shadow: 2px 2px 5px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true'); padding: 3px 4px; z-index: 401; position: absolute; left: 0; top: 0; width: auto; height: auto; display: none}
+.MathJax {display: inline; font-style: normal; font-weight: normal; line-height: normal; font-size: 100%; font-size-adjust: none; text-indent: 0; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0; min-height: 0; border: 0; padding: 0; margin: 0}
+.MathJax:focus, body :focus .MathJax {display: inline-table}
+.MathJax.MathJax_FullWidth {text-align: center; display: table-cell!important; width: 10000em!important}
+.MathJax img, .MathJax nobr, .MathJax a {border: 0; padding: 0; margin: 0; max-width: none; max-height: none; min-width: 0; min-height: 0; vertical-align: 0; line-height: normal; text-decoration: none}
+img.MathJax_strut {border: 0!important; padding: 0!important; margin: 0!important; vertical-align: 0!important}
+.MathJax span {display: inline; position: static; border: 0; padding: 0; margin: 0; vertical-align: 0; line-height: normal; text-decoration: none}
+.MathJax nobr {white-space: nowrap!important}
+.MathJax img {display: inline!important; float: none!important}
+.MathJax * {transition: none; -webkit-transition: none; -moz-transition: none; -ms-transition: none; -o-transition: none}
+.MathJax_Processing {visibility: hidden; position: fixed; width: 0; height: 0; overflow: hidden}
+.MathJax_Processed {display: none!important}
+.MathJax_ExBox {display: block!important; overflow: hidden; width: 1px; height: 60ex; min-height: 0; max-height: none}
+.MathJax .MathJax_EmBox {display: block!important; overflow: hidden; width: 1px; height: 60em; min-height: 0; max-height: none}
+.MathJax_LineBox {display: table!important}
+.MathJax_LineBox span {display: table-cell!important; width: 10000em!important; min-width: 0; max-width: none; padding: 0; border: 0; margin: 0}
+.MathJax .MathJax_HitBox {cursor: text; background: white; opacity: 0; filter: alpha(opacity=0)}
+.MathJax .MathJax_HitBox * {filter: none; opacity: 1; background: transparent}
+#MathJax_Tooltip * {filter: none; opacity: 1; background: transparent}
+@font-face {font-family: MathJax_Blank; src: url('about:blank')}
+.MathJax .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style></head>
+<body><div style="visibility: hidden; overflow: hidden; position: absolute; top: 0px; height: 1px; width: auto; padding: 0px; border: 0px none; margin: 0px; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal;"><div id="MathJax_Hidden"></div></div><div id="MathJax_Message" style="display: none;"></div>
+<div id="content" class="content"><div id="toggle-sidebar"><a href="#table-of-contents"><h2>Table of Contents</h2></a></div>
+<h1 class="title">Examen de prácticas (C3)</h1>
+<div id="table-of-contents" role="doc-toc" style="padding-bottom: 130px;">
+<h2>Table of Contents<a class="close-sidebar" href="#">Close</a></h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul class="nav">
+<li class=""><a href="#org4426d9b">1. Información</a></li>
+<li class="active"><a href="#orgad3557c">2. Ejercicio</a>
+<ul>
+<li class=""><a href="#org1ea88ac">2.1. Gene</a></li>
+<li class=""><a href="#org65c50ee">2.2. MutableGene</a></li>
+<li class=""><a href="#org1e18b05">2.3. Chromosome</a></li>
+<li class=""><a href="#org36944ae">2.4. Ayuda</a></li>
+<li class=""><a href="#orgdf26496">2.5. Aclaraciones</a></li>
+</ul>
+</li>
+<li><a href="#org69524f7">3. Requisitos técnicos</a></li>
+<li><a href="#org4dfe73b">4. Lugar y plazo de entrega</a></li>
+<li class=""><a href="#org6524581">5. Detección de plagios/copias</a></li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-org4426d9b" class="outline-2">
+<h2 id="org4426d9b"><span class="section-number-2">1.</span> Información</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>El examen tendrá una duración máxima de 2'5 horas, desde las 10:00 a
+las 12:30.</li>
+
+<li>Todo el código se escribirá en lenguaje <b>C++</b> y se corregirá con la
+versión del compilador instalado en los laboratorios de la EPS.</li>
+
+<li>El <code>Makefile</code> que tienes disponible te permite crear el archivo para
+la entrega así: <code>make tgz</code>, como has hecho en las prácticas. También
+te permite compilar el código así: <code>make p1</code>.</li>
+
+<li>Dispones de un programa principal de prueba: <code>mainp1.cc</code>.</li>
+
+<li>Un error de compilación/enlace implicará un cero en la pregunta
+donde se produzca, por tanto <b>asegúrate de que tu código compila</b>
+<b>correctamente aunque determinadas funciones no hagan nada o no lo
+hagan bien</b>.</li>
+
+<li>Puedes hacer tantas entregas como quieras, sólo se corregirá la
+última. Las entregas son similares a las que has hecho durante el
+curso con las prácticas: <a href="https://pracdlsi.dlsi.ua.es/">https://pracdlsi.dlsi.ua.es</a>. Recuerda ir
+haciendo entregas parciales mientras esté abierto el plazo de
+entrega, no se admiten entregas por ningún otro cauce ni fuera de
+plazo.</li>
+
+<li><p>
+Para que te hagas una idea de la cantidad de código a escribir, cada
+archivo <code>.cc</code> pedido ocupa, más o menos, esta cantidad de líneas:
+</p>
+
+<table rules="groups" frame="hsides" cellspacing="0" cellpadding="6" border="2">
+
+
+<colgroup>
+<col class="org-right">
+
+<col class="org-left">
+</colgroup>
+<tbody>
+<tr>
+<td class="org-right">104</td>
+<td class="org-left">chromosome.cc</td>
+</tr>
+
+<tr>
+<td class="org-right">76</td>
+<td class="org-left">gene.cc</td>
+</tr>
+
+<tr>
+<td class="org-right">45</td>
+<td class="org-left">mutablegene.cc</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+Si a ti te ocupan un número distinto de líneas, es normal, no pasa
+nada.
+</p></li>
+
+<li>No se permiten apuntes en el examen, ni teléfono móvil, smartwatch,
+memorias usb o similar. Se expulsará del examen a cualquiera que
+incumpla esta norma.</li>
+
+<li>Puedes usar bolígrafo y papel en blanco para ayudarte en el
+desarrollo de los problemas.</li>
+
+<li>Ten tu DNI disponible para poder identificarte.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgad3557c" class="outline-2">
+<h2 id="orgad3557c"><span class="section-number-2">2.</span> Ejercicio</h2>
+<div class="outline-text-2" id="text-2">
+<ol class="org-ol">
+<li><p>
+Dada la siguiente estructura de clases representada mediante un
+diagrama <b>UML</b>:
+</p></li>
+</ol>
+
+
+<div id="org852b542" class="figure">
+<p><img src="c3.png" alt="c3.png">
+</p>
+</div>
+
+<p>
+<b>Se pide:</b>
+</p>
+
+<ul class="org-ul">
+<li>Escribir el contenido de los archivos <code>gene.cc</code>, <code>mutablegene.cc</code> y
+<code>chromosome.cc</code> como en las prácticas hechas durante el curso.</li>
+
+<li>Para ello debes implementar todos los métodos indicados en el
+fichero <code>.h</code> correspondiente.</li>
+</ul>
+</div>
+
+<div id="outline-container-org1ea88ac" class="outline-3">
+<h3 id="org1ea88ac"><span class="section-number-3">2.1.</span> Gene</h3>
+<div class="outline-text-3" id="text-2-1">
+<ul class="org-ul">
+<li>Un <code>Gen</code> está representado por un carácter de entre una serie de
+caracteres válidos.</li>
+
+<li>Los métodos de la clase <code>Gene</code> hacen lo siguiente:
+<ul class="org-ul">
+<li><code>Gene(char d);</code> : Inicializa un gen a partir de un
+carácter. Tiene el mismo comportamiento que <code>set_data</code>.</li>
+<li><code>Gene(const Gene&amp; g);</code> : Inicializa un gen a partir de otro
+gen. Tiene el mismo comportamiento que <code>set_data</code>.</li>
+<li><code>void set_data (char d);</code> : Dado el juego de caracteres
+permitidos:
+<code>"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"</code>,
+
+<ol class="org-ol">
+<li>si el carácter <code>d</code> está entre ellos, asigna ese carácter a la
+variable de instancia del Gen y emite la señal
+<code>on_data_changed</code> pasándole como argumentos el puntero al gen
+actual, el valor antiguo que había en su variable data y el
+nuevo valor de ésta.</li>
+
+<li>si no, elige un carácter al azar de entre los permitidos y
+lo almacena en la variable de instancia del Gen. No hace
+nada más en este caso.</li>
+</ol></li>
+<li><code>char get_data () const;</code> : Devuelve el carácter almacenado en el
+Gen.</li>
+<li><code>void set_random_data ();</code> : Elige un carácter al azar de entre
+los permitidos y lo almacena en la variable de instancia del
+Gen.</li>
+<li><code>operator char () const;</code> : Convierte un Gen en un carácter.</li>
+<li><code>friend ostream&amp; operator &lt;&lt; (ostream&amp; os, const Gene&amp; g);</code></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org65c50ee" class="outline-3">
+<h3 id="org65c50ee"><span class="section-number-3">2.2.</span> MutableGene</h3>
+<div class="outline-text-3" id="text-2-2">
+<ul class="org-ul">
+<li>Un <code>MutableGene</code> <i>deriva de</i> y representa un <code>Gen</code> cuyo carácter puede
+cambiar aleatoriamente con una probabilidad <code>mr</code>.</li>
+
+<li>Los métodos de la clase <code>MutableGene</code> hacen lo siguiente:
+<ul class="org-ul">
+<li><code>MutableGene(char c);</code> : Constructor a partir de un carácter.</li>
+<li><code>MutableGene(const MutableGene&amp; g);</code> : Constructor a partir de
+otro <code>MutableGene</code>.</li>
+<li><code>void mutate_data(float mr);</code> : Dada una probabilidad <code>mr</code>, <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-1-Frame" tabindex="0" style="position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;mo&gt;&amp;#x2264;&lt;/mo&gt;&lt;mi&gt;m&lt;/mi&gt;&lt;mi&gt;r&lt;/mi&gt;&lt;mo&gt;&amp;#x2264;&lt;/mo&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/math&gt;" role="presentation"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-1" style="width: 5.879em; display: inline-block;"><span style="display: inline-block; position: relative; width: 5.021em; height: 0px; font-size: 117%;"><span style="position: absolute; clip: rect(1.578em, 1004.95em, 2.702em, -1000em); top: -2.404em; left: 0em;"><span class="mrow" id="MathJax-Span-2"><span class="mn" id="MathJax-Span-3" style="font-family: MathJax_Main;">0</span><span class="mo" id="MathJax-Span-4" style="font-family: MathJax_Main; padding-left: 0.278em;">≤</span><span class="mi" id="MathJax-Span-5" style="font-family: MathJax_Math; font-style: italic; padding-left: 0.278em;">m</span><span class="mi" id="MathJax-Span-6" style="font-family: MathJax_Math; font-style: italic;">r</span><span class="mo" id="MathJax-Span-7" style="font-family: MathJax_Main; padding-left: 0.278em;">≤</span><span class="mn" id="MathJax-Span-8" style="font-family: MathJax_Main; padding-left: 0.278em;">1</span></span><span style="display: inline-block; width: 0px; height: 2.404em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.224em; border-left: 0px solid; width: 0px; height: 1.066em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>0</mn><mo>≤</mo><mi>m</mi><mi>r</mi><mo>≤</mo><mn>1</mn></math></span></span><script type="math/tex" id="MathJax-Element-1">0 \le mr
+     \le 1</script>, mutará/cambiará con esa probabilidad el carácter actual
+de este <code>MutableGene</code> por otro al azar de entre el juego de
+caracteres válidos.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org1e18b05" class="outline-3">
+<h3 id="org1e18b05"><span class="section-number-3">2.3.</span> Chromosome</h3>
+<div class="outline-text-3" id="text-2-3">
+<ul class="org-ul">
+<li>Un <code>Chromosome</code> representa una colección de <i>genes mutables</i> junto a una
+cadena de caracteres objetivo o <i>target string</i> o <code>ts</code>. La longitud de
+esta cadena siempre será igual al número de genes que tiene el
+cromosoma.</li>
+
+<li>La idea es que si construimos un <code>Chromosome</code> con una cadena inicial
+objetivo, el cromosoma creará tantos <code>MutableGene</code> como caracteres
+tiene esta cadena. El carácter inicial de cada uno de estos genes
+será un carácter al azar.</li>
+
+<li>Dado que cada <i>gen</i> del <i>cromosoma</i> contiene un carácter, podemos
+construir una cadena concatenando todos estos caracteres. La
+longitud de esta cadena será igual a la longitud de la cadena
+objetivo.</li>
+
+<li>Lo que se pretende es comprobar si al ir mutando individualmente
+cada uno de estos genes durante un cierto tiempo y con una cierta
+probabilidad podemos conseguir formar una cadena igual a la cadena
+objetivo.</li>
+
+<li>Sus métodos hacen lo siguiente:
+<ul class="org-ul">
+<li><code>Chromosome (string&amp; tstr);</code> : Crea un cromosoma con la cadena
+objetivo <code>tstr</code>. Deberá crear tantos <i>genes mutables</i> como caracteres
+tenga esta cadena. El carácter inicial de cada uno de ellos será
+un carácter de entre el juego de caracteres válido.</li>
+<li><code>Chromosome (const char* tstr);</code> : Idem al anterior pero
+sobrecargado para un dato <i>literal cadena de caracteres</i>.</li>
+<li><code>~Chromosome ();</code> : Libera la memoria ocupada por los genes de este
+cromosoma.</li>
+<li><code>string target () const;</code> : Devuelve la cadena objetivo.</li>
+<li><code>uint32_t fitness () const;</code> : Indica la aptitud de este
+cromosoma. Dada la cadena objetivo y la cadena formada por los
+caracteres de los genes de este cromosoma, nos devuelve el número
+de posiciones en las que <b>no coincide</b> el carácter de una en la
+otra. Por ejemplo, a título ilustrativo, si <code>fitness</code> fuera una
+función que recibe dos cadenas:
+<ul class="org-ul">
+<li><code>fitness("hola", "bola") == 1</code> , <code>h</code> != <code>b</code></li>
+<li><code>fitness("teclado", "esalado") == 3</code> , <code>t/e</code>, <code>e/s</code> , <code>c/a</code></li>
+<li><code>fitness("hola", "hola") == 0</code></li>
+</ul></li>
+<li><code>void show_genes (ostream&amp; os) const;</code> : Aplica el operador <code>&lt;&lt;</code> a
+cada uno de los genes del cromosoma.</li>
+<li><code>string get_genes () const;</code> : Devuelve una cadena formada por la
+concatenación de los caractéres que hay en los genes del
+cromosoma.</li>
+<li><code>uint32_t size();</code> : Devuelve el número de genes que hay en el
+cromosoma.</li>
+<li><code>void evolve (float mr);</code> : Hace que cada gen del cromosoma mute con
+una probabilidad <code>mr</code> y al finalizar emite la señal <code>on_evolve</code>. Esta
+señal recibe como argumento el puntero al cromosoma que la emite.</li>
+<li><code>void create_genes ();</code> : Crea e inicializa con un carácter al azar
+cada uno de los genes de este cromosoma. Recuerda que habrá tantos
+genes como caracteres tenga la cadena objetivo.</li>
+<li><code>void free_gene_list (vector&lt;MutableGene*&gt;&amp; l);</code> : Liberará la
+memoria ocupada por cada uno de los genes del cromosoma y dejará
+este cromosoma sin ningún gen.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org36944ae" class="outline-3">
+<h3 id="org36944ae"><span class="section-number-3">2.4.</span> Ayuda</h3>
+<div class="outline-text-3" id="text-2-4">
+<ul class="org-ul">
+<li>Implementa los nuevos archivos <code>.cc</code> en este orden, te será más
+sencillo:
+<ol class="org-ol">
+<li><code>gene.cc</code></li>
+<li><code>mutablegene.cc</code></li>
+<li><code>chromosome.cc</code></li>
+</ol></li>
+<li>Crea inicialmente una versión <i>vacía</i> de cada función/método que
+devuelva un valor cualquiera del tipo de dato pedido, esto te
+permitirá tener código que compila aunque no haga todavía lo que
+se pide.</li>
+<li><p>
+Una vez creado un fichero <code>.cc</code> puedes comprobar si compila bien
+así:
+</p>
+<pre class="example" id="orgcba123f">make gene.o
+make mutablegene.o
+make chromosome.o
+</pre></li>
+<li>Puedes crear las funciones auxiliares que necesites en cada fichero
+<code>.cc</code>. Deberán pertenecer al espacio de nombres <code>C3</code>.</li>
+<li>Dispones de un programa principal de prueba (<code>mainp1.cc</code>) y puedes
+compilarlo con ayuda del <code>Makefile</code> así: <code>make p1</code>, y ejecutarlo así:
+<code>make runp1</code> o <code>make valgrindp1</code>, de esta última forma comprobarás que
+no deja memoria sin liberar.</li>
+<li><p>
+Una posible salida producida por <code>mainp1.cc</code> podría ser esta:
+</p>
+<pre class="example" id="org216327c">============= GENE ============
+
+g: h
+g as char: h
+
+============= MUTABLE GENE ============
+
+mg: a now mutate 10 times with mr = 20%
+mg : a
+mg : a
+mg : a
+mg : a
+mg : a
+
+Data changed from: a to: M
+mg : M
+mg : M
+mg : M
+mg : M
+mg : M
+
+============= CHROMOSOME ============
+
+Crm target length: 13 Crm genes length: 13
+Crm target: [hoyes9dejunio]
+Crm genes:  [n2L9K88eMlGn7]
+Crm fitness: [12]
+
+Evolve 10 times.
+
+
+Evolved Chromosome (0x7fff935eaf80)
+Crm genes:  [ctLRK8BeMlWn7]
+Crm fitness: [12]
+
+Evolved Chromosome (0x7fff935eaf80)
+Crm genes:  [ct5RKyB3MlWa7]
+Crm fitness: [13]
+
+Evolved Chromosome (0x7fff935eaf80)
+Crm genes:  [9t5RXyB3Mlwa7]
+Crm fitness: [13]
+
+Evolved Chromosome (0x7fff935eaf80)
+Crm genes:  [9U5RXcB3Mjwa7]
+Crm fitness: [13]
+
+Evolved Chromosome (0x7fff935eaf80)
+Crm genes:  [9U5RXcB3MjYap]
+Crm fitness: [13]
+
+Evolved Chromosome (0x7fff935eaf80)
+Crm genes:  [9U5AXcaBMBDap]
+Crm fitness: [13]
+
+Evolved Chromosome (0x7fff935eaf80)
+Crm genes:  [9U5AXciBWBvsR]
+Crm fitness: [13]
+
+Evolved Chromosome (0x7fff935eaf80)
+Crm genes:  [Rt5AXciBtBo3R]
+Crm fitness: [13]
+
+Evolved Chromosome (0x7fff935eaf80)
+Crm genes:  [RtkAdu67tBF3R]
+Crm fitness: [13]
+
+Evolved Chromosome (0x7fff935eaf80)
+Crm genes:  [RtkAduO7tBF3R]
+Crm fitness: [13]
+
+Crm show_genes:
+RtkAduO7tBF3R
+</pre></li>
+<li><p>
+Aquí tienes un ejemplo de uso de <code>boost::signals2</code>:
+</p>
+<div class="org-src-container">
+<pre class="src src-c++"><span style="color: #a0132f;">#include</span> <span style="color: #2544bb;">&lt;iostream&gt;</span>
+<span style="color: #a0132f;">#include</span> <span style="color: #2544bb;">&lt;boost/signals2.hpp&gt;</span>
+
+<span style="color: #8f0075;">void</span> <span style="color: #721045;">my_slot</span> <span style="color: #000000;">()</span> <span style="color: #000000;">{</span>
+  <span style="color: #005a5f;">std</span>::cout &lt;&lt; <span style="color: #2544bb;">"slot example\n"</span>;
+<span style="color: #000000;">}</span>
+
+<span style="color: #5317ac;">class</span> <span style="color: #005a5f;">Car</span> <span style="color: #000000;">{</span>
+<span style="color: #5317ac;">public</span>:
+  <span style="color: #8f0075;">void</span> <span style="color: #721045;">out_of_gas_cb</span> <span style="color: #a8007f;">()</span> <span style="color: #a8007f;">{</span> <span style="color: #005a5f;">std</span>::cout &lt;&lt; <span style="color: #2544bb;">"Gas needed!\n"</span>; <span style="color: #a8007f;">}</span>
+<span style="color: #000000;">}</span>;
+
+<span style="color: #8f0075;">int</span> <span style="color: #721045;">main</span><span style="color: #000000;">()</span> <span style="color: #000000;">{</span>
+  <span style="color: #005a5f;">boost</span>::<span style="color: #005a5f;">signals2</span>::<span style="color: #005a5f;">signal</span><span style="color: #a8007f;">&lt;</span><span style="color: #8f0075;">void</span> <span style="color: #005f88;">()</span><span style="color: #a8007f;">&gt;</span> <span style="color: #00538b;">sig</span>;
+  <span style="color: #005a5f;">Car</span> <span style="color: #00538b;">c</span>;
+
+  sig.connect<span style="color: #a8007f;">(</span>my_slot<span style="color: #a8007f;">)</span>;
+  <span style="color: #721045;">sig</span><span style="color: #a8007f;">()</span>;
+<span style="color: #000000;">}</span>
+</pre>
+</div></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgdf26496" class="outline-3">
+<h3 id="orgdf26496"><span class="section-number-3">2.5.</span> Aclaraciones</h3>
+<div class="outline-text-3" id="text-2-5">
+<ol class="org-ol">
+<li>Todas las clases pertenecen al <i>espacio de nombres</i> <code>C3</code>. Cualquier
+función auxiliar que definas deberá estar dentro de este espacio
+de nombres para evitar colisiones.</li>
+<li>Para la generación de números aleatorios recuerda que puedes usar
+la función <code>int std::rand();</code> declarada en <code>&lt;cstdlib&gt;</code>. Esta función
+devuelve un valor entre <code>0</code>​ y <code>RAND_MAX</code> incluidos.</li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org69524f7" class="outline-2">
+<h2 id="org69524f7"><span class="section-number-2">3.</span> Requisitos técnicos</h2>
+<div class="outline-text-2" id="text-3">
+<ul class="org-ul">
+<li>Requisitos que tiene que cumplir este trabajo práctico para
+considerarse válido y ser evaluado (si no se cumple alguno de los
+requisitos la calificación será <b>cero</b>):</li>
+
+<li><p>
+Al principio de todos los ficheros fuente (<code>.cc</code>) entregados se debe
+incluir un comentario con el nombre y el NIF (o equivalente) de la
+persona que entrega el examen, como en el siguiente ejemplo:
+</p>
+
+<pre class="example" id="org5e1a1c1">// NIF: 12345678X
+// NOMBRE: PEREZ GARCIA, ALEJANDRO
+</pre></li>
+
+<li><p>
+El archivo entregado se llama <code>irp2-c3.tgz</code> (todo en minúsculas). En
+el estarán todos los ficheros <code>.cc</code> pedidos en una carpeta llamada
+<b><code>irp2-c3</code></b>.
+</p>
+
+<p>
+Si por algún motivo entregas los ficheros <code>.h</code>, <code>mainp1.cc</code>, <code>Makefile</code>,
+etc… no pasa nada.
+</p></li>
+</ul>
+
+<ul class="org-ul">
+<li>Las clases, métodos y funciones implementados se llaman como se
+indica en el enunciado (respetando en todo caso el uso de
+mayúsculas y minúsculas). También es imprescindible respetar
+estrictamente los textos y los formatos de salida que se indican
+en este enunciado.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org4dfe73b" class="outline-2">
+<h2 id="org4dfe73b"><span class="section-number-2">4.</span> Lugar y plazo de entrega</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+La entrega se realiza en <a href="https://pracdlsi.dlsi.ua.es/index.cgi">https://pracdlsi.dlsi.ua.es</a>. Allí puedes ver
+el plazo de entrega.
+</p>
+
+<p>
+Puedes entregar el examen tantas veces como quieras mientras el plazo
+de entrega esté abierto, sólo se corregirá la última entrega (las
+anteriores no se borran).
+</p>
+
+<p>
+El usuario y contraseña para entregar prácticas es el mismo que se
+utiliza en UACloud.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6524581" class="outline-2">
+<h2 id="org6524581"><span class="section-number-2">5.</span> Detección de plagios/copias</h2>
+<div class="outline-text-2" id="text-5">
+<ul class="org-ul">
+<li>El examen debe ser un trabajo original de la persona que lo
+entrega.</li>
+
+<li>En caso de detectarse indicios de copia en el examen entregado, se
+tomarán las medidas disciplinarias correspondientes, informando a
+la dirección del DLSI por si hubiera lugar a otras medidas
+disciplinarias adicionales.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Date: 2022.06.09</p>
+<p class="author">Author: Programación-II - Ingeniería Robótica</p>
+<p class="date">Created: 2022-06-01 mié 12:12</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+
+
+<div style="position: absolute; width: 0px; height: 0px; overflow: hidden; padding: 0px; border: 0px none; margin: 0px;"><div id="MathJax_Font_Test" style="position: absolute; visibility: hidden; top: 0px; left: 0px; width: auto; padding: 0px; border: 0px none; margin: 0px; white-space: nowrap; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; font-size: 40px; font-weight: normal; font-style: normal; font-size-adjust: none; font-family: MathJax_Size4, sans-serif;"></div></div></body></html>

@@ -9,7 +9,7 @@ std::ostream &operator<<(std::ostream &os, const Container<U> &c){
 		os << c.cname << endl;
 	}
 	for(int i = 0; i < c.items.size(); i++){
-		if constexpr (std::is_pointer<U>::value){
+		if (std::is_pointer<U>::value){
 			os << *(c.items[i]); // al contenido		
 		}
 		else{

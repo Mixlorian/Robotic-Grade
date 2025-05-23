@@ -1,0 +1,21 @@
+./p2
+V1
+--
+weight: 	800
+wheels: 	4
+autonomy: 	1000
+nspeed: 	0
+·····················
+new autonomy: 	673
+new speed: 	93.3
+
+
+Gp1
+---
+new capacity: 	456
+new brand: 	Citröen
+
+
+~Car
+~Gaspowered
+~Vehicle
