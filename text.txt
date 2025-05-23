@@ -1,3 +1,5 @@
 nombre de los ficheros para programacion 1:
 
 PX_Ej-Y_G2_Pascual-Corchero
+
+g++ -std=c++17 -Wall -o p4 mainp4.cc deathstar.cc hangar.cc ship.cc imperialship.cc rebelship.cc xwing.cc stardestroyer.cc tiefighter.cc
