@@ -34,7 +34,7 @@ namespace C4 {
     Matrix2d operator+ (const Matrix2d& m2);
 
   private:
-    std::vector<std::vector<t>> m;
+    std::vector<std::vector<T>> m;
   };
 }  // C4
 
